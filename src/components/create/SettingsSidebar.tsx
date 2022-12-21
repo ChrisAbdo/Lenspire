@@ -1,12 +1,12 @@
-import * as React from "react";
-import createStyles from "./create.module.css";
-import { Divider, Drawer, Grid, TextField, Typography } from "@mui/material";
-import styles from "./create.module.css";
-import TagSelector from "./TagSelector";
-import { Web3Button } from "@thirdweb-dev/react";
-import { LENS_CONTRACT_ADDRESS } from "../../../const/blockchain";
-import { LENS_ABI } from "../../../const/abis";
-import { useCreatePost } from "../../lib/lens/createPost";
+import * as React from 'react';
+import createStyles from './create.module.css';
+import { Divider, Drawer, Grid, TextField, Typography } from '@mui/material';
+import styles from './create.module.css';
+import TagSelector from './TagSelector';
+import { Web3Button } from '@thirdweb-dev/react';
+import { LENS_CONTRACT_ADDRESS } from '../../../const/blockchain';
+import { LENS_ABI } from '../../../const/abis';
+import { useCreatePost } from '../../lib/lens/createPost';
 
 type Props = {
   postMetadata: Record<string, any>;
@@ -26,9 +26,9 @@ export default function TemporaryDrawer({
   const toggleDrawer =
     (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
       if (
-        event.type === "keydown" &&
-        ((event as React.KeyboardEvent).key === "Tab" ||
-          (event as React.KeyboardEvent).key === "Shift")
+        event.type === 'keydown' &&
+        ((event as React.KeyboardEvent).key === 'Tab' ||
+          (event as React.KeyboardEvent).key === 'Shift')
       ) {
         return;
       }
@@ -40,7 +40,7 @@ export default function TemporaryDrawer({
     <Grid
       container
       direction="column"
-      className={createStyles.settingsSidebar}
+      className="p-4 bg-[#f8f8f8]"
       role="presentation"
     >
       <Grid item>
@@ -48,7 +48,7 @@ export default function TemporaryDrawer({
       </Grid>
       <Grid item>
         <Typography variant="body2">
-          Configure your settings before publishing to the blockchain.
+          Enter the details for your post below then publish!
         </Typography>
       </Grid>
 
@@ -56,10 +56,10 @@ export default function TemporaryDrawer({
 
       {postMetadata.coverImage ? (
         <>
-          <Typography variant="body1" className={styles.label}>
+          <Typography variant="body1" className="text-black">
             Cover Image
           </Typography>
-          <Typography variant="body2" className={styles.tinyLabel}>
+          <Typography className="text-black">
             Note: editable in the main post editor.
           </Typography>
           <img
@@ -77,14 +77,22 @@ export default function TemporaryDrawer({
         <Typography variant="body1" className={styles.label}>
           Title
         </Typography>
-        <Typography variant="body2" className={styles.tinyLabel}>
+        <Typography variant="body2" className="text-black">
           Note: editable in the main post editor.
         </Typography>
-        <TextField
+        {/* <TextField
           variant="outlined"
           fullWidth
           disabled
-          value={postMetadata.title || ""}
+          value={postMetadata.title || ''}
+          className="text-black"
+        /> */}
+        <input
+          type="text"
+          placeholder="You can't touch this"
+          className="input input-bordered w-full max-w-xs"
+          value={postMetadata.title || ''}
+          disabled
         />
       </Grid>
 
@@ -94,7 +102,17 @@ export default function TemporaryDrawer({
         <Typography variant="body1" className={styles.label}>
           Description
         </Typography>
-        <TextField variant="outlined" fullWidth multiline rows={6} />
+        {/* <TextField
+          className="border border-black"
+          variant="outlined"
+          fullWidth
+          multiline
+          rows={6}
+        /> */}
+        <textarea
+          className="textarea textarea-bordered w-full"
+          placeholder="Sample description"
+        ></textarea>
       </Grid>
 
       <Grid item className={styles.textFieldContainer}>
@@ -109,19 +127,18 @@ export default function TemporaryDrawer({
       </Grid>
 
       <Web3Button
-        className={styles.publishButton}
         contractAddress={LENS_CONTRACT_ADDRESS}
         contractAbi={LENS_ABI}
         action={async () => await createPost({ ...postMetadata })}
       >
-        <Typography variant="h6">Publish Post 🌿</Typography>
+        <Typography variant="h6">Publish to Lens 🌿</Typography>
       </Web3Button>
     </Grid>
   );
 
   return (
     <div>
-      <Drawer anchor={"right"} open={open} onClose={toggleDrawer(false)}>
+      <Drawer anchor={'right'} open={open} onClose={toggleDrawer(false)}>
         {list()}
       </Drawer>
     </div>

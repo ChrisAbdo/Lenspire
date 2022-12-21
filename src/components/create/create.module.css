@@ -1,6 +1,6 @@
 .navbarContainer {
   border: 1px solid rgba(234, 234, 234, 0.3);
-  background-color: #141414;
+  background-color: #ffffff;
   border-radius: 16px;
   min-height: 64px;
   height: auto;
@@ -161,6 +161,7 @@
 
 .textFieldContainer {
   margin-bottom: 32px;
+  
 }
 
 .sidebarImagePreview {
@@ -178,14 +179,8 @@
   cursor: pointer;
   padding: 8px;
   border-radius: 8px;
-  border: 1px solid transparent;
-  border-image: linear-gradient(
-    to bottom right,
-    #9e61ff 0%,
-    #619bff 25%,
-    #e73c7e 75%,
-    #23a6d5 100%
-  );
+  border: 1px solid black;
+  
   border-image-slice: 1;
 }
 

@@ -1,7 +1,7 @@
-import { Button, Typography } from "@mui/material";
-import React, { useEffect, useState, useRef } from "react";
-import styles from "./create.module.css";
-import CloseIcon from "@mui/icons-material/Close";
+import { Button, Typography } from '@mui/material';
+import React, { useEffect, useState, useRef } from 'react';
+import styles from './create.module.css';
+import CloseIcon from '@mui/icons-material/Close';
 
 type Props = {
   coverImage: File | null;
@@ -27,7 +27,7 @@ export default function CoverImage({ coverImage, setCoverImage }: Props) {
     return (
       <>
         <div
-          className={styles.dragAndDropZone}
+          className="border-2 border-black h-64 text-center justify-center items-center rounded-3xl"
           onDragOver={(e) => e.preventDefault()}
           onDrop={(e) => {
             e.preventDefault();
@@ -42,8 +42,9 @@ export default function CoverImage({ coverImage, setCoverImage }: Props) {
             }
           }}
         >
-          <Typography variant="body2">
-            Drag and drop your cover image here
+          <Typography variant="body2" className="text-black">
+            Drag and drop your design here / Click to upload <br /> Accepted
+            file types: .png, .jpg, .gif
           </Typography>
         </div>
 
@@ -58,7 +59,7 @@ export default function CoverImage({ coverImage, setCoverImage }: Props) {
               setCoverImage(file);
             }
           }}
-          style={{ display: "none" }}
+          style={{ display: 'none' }}
         />
       </>
     );
@@ -69,7 +70,7 @@ export default function CoverImage({ coverImage, setCoverImage }: Props) {
     <div className={styles.coverImagePreviewContainer}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src={coverImageUrl || ""}
+        src={coverImageUrl || ''}
         alt="Cover image"
         className={styles.coverImagePreview}
       />

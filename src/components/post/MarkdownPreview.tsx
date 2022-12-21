@@ -1,11 +1,11 @@
-import { Typography } from "@mui/material";
-import { MediaRenderer } from "@thirdweb-dev/react";
-import React, { ReactElement } from "react";
-import ReactMarkdown from "react-markdown";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
-import theme from "../../lib/mui/theme";
-import styles from "./post.module.css";
+import { Typography } from '@mui/material';
+import { MediaRenderer } from '@thirdweb-dev/react';
+import React, { ReactElement } from 'react';
+import ReactMarkdown from 'react-markdown';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import theme from '../../lib/mui/theme';
+import styles from './post.module.css';
 
 interface Props {
   content: string;
@@ -38,7 +38,7 @@ export default function MarkdownPreview({ content }: Props): ReactElement {
           p: (props: any) => {
             const { node } = props;
 
-            if (node.children[0].tagName === "img") {
+            if (node.children[0].tagName === 'img') {
               try {
                 const image = node.children[0];
 
@@ -46,7 +46,7 @@ export default function MarkdownPreview({ content }: Props): ReactElement {
 
                 return <MediaRenderer src={src} alt={alt} width="100%" />;
               } catch (error) {
-                console.error("Error:", error);
+                console.error('Error:', error);
                 return <></>;
               }
             }
@@ -56,9 +56,10 @@ export default function MarkdownPreview({ content }: Props): ReactElement {
                 {...props}
                 style={{
                   ...theme.typography.body1,
-                  fontSize: "1.25rem",
-                  marginBottom: "1.25em",
-                  marginTop: "1.25em",
+                  fontSize: '1.25rem',
+                  marginBottom: '1.25em',
+                  marginTop: '1.25em',
+                  color: theme.palette.text.primary,
                 }}
               ></p>
             );
@@ -68,11 +69,11 @@ export default function MarkdownPreview({ content }: Props): ReactElement {
               {...props}
               style={{
                 ...theme.typography.body1,
-                marginBottom: "1.25em",
-                marginTop: "1.25em",
-                fontSize: "1.25rem",
-                listStyle: "disc",
-                paddingLeft: "2em",
+                marginBottom: '1.25em',
+                marginTop: '1.25em',
+                fontSize: '1.25rem',
+                listStyle: 'disc',
+                paddingLeft: '2em',
               }}
             ></ul>
           ),
@@ -81,11 +82,11 @@ export default function MarkdownPreview({ content }: Props): ReactElement {
               {...props}
               style={{
                 ...theme.typography.body1,
-                marginBottom: "1.25em",
-                fontSize: "1.25rem",
-                marginTop: "1.25em",
-                listStyle: "decimal",
-                paddingLeft: "2em",
+                marginBottom: '1.25em',
+                fontSize: '1.25rem',
+                marginTop: '1.25em',
+                listStyle: 'decimal',
+                paddingLeft: '2em',
               }}
             ></ol>
           ),
@@ -98,15 +99,15 @@ export default function MarkdownPreview({ content }: Props): ReactElement {
               style={{
                 ...theme.typography.body1,
                 color: theme.palette.primary.main,
-                textDecoration: "underline",
-                fontSize: "1.25rem",
+                textDecoration: 'underline',
+                fontSize: '1.25rem',
               }}
             />
           ),
 
           // Re-style code blocks
           code: ({ node, inline, className, children, ...props }) => {
-            const match = /language-(\w+)/.exec(className || "") ?? "text";
+            const match = /language-(\w+)/.exec(className || '') ?? 'text';
             return !inline && match ? (
               <SyntaxHighlighter
                 // @ts-ignore TODO
@@ -115,7 +116,7 @@ export default function MarkdownPreview({ content }: Props): ReactElement {
                 PreTag="div"
                 {...props}
               >
-                {String(children).replace(/\n$/, "")}
+                {String(children).replace(/\n$/, '')}
               </SyntaxHighlighter>
             ) : (
               <code className={className} {...props}>

@@ -4,11 +4,11 @@ const theme = createTheme({
   palette: {
     background: {
       paper: "#1d1d1d",
-      default: "#090909",
+      default: "#f0f0f0",
     },
     primary: {
-      main: "#9e61ff",
-      contrastText: "#fff",
+      main: "#000",
+      contrastText: "#000",
     },
     secondary: {
       main: "#619bff",
@@ -19,7 +19,7 @@ const theme = createTheme({
       contrastText: "#fff",
     },
     text: {
-      primary: "#fff",
+      primary: "#000",
       secondary: "rgba(255, 255, 255, 0.7)",
       disabled: "rgba(255, 255, 255, 0.38)",
     },
@@ -55,10 +55,10 @@ const theme = createTheme({
       letterSpacing: "-.025em",
       fontWeight: 700,
       fontSize: "3rem",
-      color: "#fff",
+      color: "#000",
     },
     h3: {
-      color: "#fff",
+      color: "#000",
       fontWeight: 600,
       fontSize: "2rem",
       lineHeight: 1.75,
@@ -72,12 +72,12 @@ const theme = createTheme({
     body1: {
       fontSize: "1.125rem",
       lineHeight: 1.75,
-      color: "#d1d5db",
+      color: "#000",
     },
     body2: {
       fontSize: "1rem",
       lineHeight: 1.75,
-      color: "#9CA3AF",
+      color: "#000",
     },
   },
 

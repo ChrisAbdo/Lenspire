@@ -1,16 +1,16 @@
-import { Button, Grid, Typography } from "@mui/material";
-import React from "react";
-import { useGlobalInformationModalContext } from "../../context/GlobalInformationModalContext";
-import styles from "./modal.module.css";
-import CloseIcon from "@mui/icons-material/Close";
+import { Button, Grid, Typography } from '@mui/material';
+import React from 'react';
+import { useGlobalInformationModalContext } from '../../context/GlobalInformationModalContext';
+import styles from './modal.module.css';
+import CloseIcon from '@mui/icons-material/Close';
 import {
   useAddress,
   useNetworkMismatch,
   useNetwork,
   ConnectWallet,
-} from "@thirdweb-dev/react";
-import useLogin from "../../lib/auth/useLogin";
-import { CHAIN_ID } from "../../../const/blockchain";
+} from '@thirdweb-dev/react';
+import useLogin from '../../lib/auth/useLogin';
+import { CHAIN_ID } from '../../../const/blockchain';
 
 export default function ModalOverlay() {
   const { modalState, setModalState } = useGlobalInformationModalContext();
@@ -28,7 +28,7 @@ export default function ModalOverlay() {
         container
         direction="column"
         alignItems="center"
-        className={styles.modalContainer}
+        className="bg-white w-1/2 h-1/2"
       >
         <Button
           onClick={() => setModalState(null)}
@@ -39,13 +39,13 @@ export default function ModalOverlay() {
         {/* Heading */}
         <Grid item>
           <Typography variant="h2">
-            {modalState.type === "login"
-              ? "Login Required 🌿"
-              : modalState.type === "success"
-              ? "Success! 🎉"
-              : modalState.type === "error"
-              ? "Something Failed! 😢"
-              : ""}
+            {modalState.type === 'login'
+              ? 'Login Required 🌿'
+              : modalState.type === 'success'
+              ? 'Success! 🎉'
+              : modalState.type === 'error'
+              ? 'Something Failed! '
+              : ''}
           </Typography>
         </Grid>
 
@@ -55,8 +55,8 @@ export default function ModalOverlay() {
         </Grid>
 
         {/* Sign in button */}
-        {modalState.type === "login" ||
-          (modalState.type === "error" ? (
+        {modalState.type === 'login' ||
+          (modalState.type === 'error' ? (
             <>
               <Grid item className={styles.subheadingContainer}>
                 <Typography variant="body1">
@@ -80,13 +80,12 @@ export default function ModalOverlay() {
                     </Button>
                   ) : (
                     // If on correct network
-                    <Button
-                      variant="contained"
+                    <button
                       onClick={() => login().then(() => setModalState(null))}
-                      className={styles.actionButton}
+                      className="btn btn-outline"
                     >
                       Sign In
-                    </Button>
+                    </button>
                   )
                 }
               </Grid>

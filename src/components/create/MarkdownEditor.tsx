@@ -1,11 +1,11 @@
-import { InputBase } from "@mui/material";
-import React from "react";
-import decorateMarkdown from "../../lib/markdown/decorateMarkdown";
+import { InputBase } from '@mui/material';
+import React from 'react';
+import decorateMarkdown from '../../lib/markdown/decorateMarkdown';
 import {
   insertMediaIntoMarkdown,
   uploadMedia,
-} from "../../lib/markdown/uploadMedia";
-import styles from "./create.module.css";
+} from '../../lib/markdown/uploadMedia';
+import styles from './create.module.css';
 
 type Props = {
   mdInputRef: React.RefObject<HTMLTextAreaElement>;
@@ -24,35 +24,36 @@ export default function MarkdownEditor({
       multiline
       minRows={40}
       fullWidth
-      placeholder="Write your story..."
+      placeholder="Enter a description here..."
+      className="mt-4"
       value={mdValue}
       onChange={(e) => setMdValue(e.target.value)}
       onKeyDown={(e) => {
         // Bold
-        if (e.key === "b" && e.ctrlKey) {
+        if (e.key === 'b' && e.ctrlKey) {
           if (!mdInputRef.current) return;
           e.preventDefault();
           e.stopPropagation();
-          decorateMarkdown(mdInputRef.current, "bold", setMdValue);
+          decorateMarkdown(mdInputRef.current, 'bold', setMdValue);
         }
 
         // Italic
-        if (e.key === "i" && e.ctrlKey) {
+        if (e.key === 'i' && e.ctrlKey) {
           if (!mdInputRef.current) return;
           e.preventDefault();
           e.stopPropagation();
-          decorateMarkdown(mdInputRef.current, "italic", setMdValue);
+          decorateMarkdown(mdInputRef.current, 'italic', setMdValue);
         }
 
         // Tab
-        if (e.key === "Tab") {
+        if (e.key === 'Tab') {
           if (!mdInputRef.current) return;
           e.preventDefault();
           e.stopPropagation();
-          decorateMarkdown(mdInputRef.current, "tab", setMdValue);
+          decorateMarkdown(mdInputRef.current, 'tab', setMdValue);
         }
       }}
-      className={styles.editor}
+      // className={styles.editor}
       onDrop={async (e) => {
         e.preventDefault();
 
@@ -60,7 +61,7 @@ export default function MarkdownEditor({
         if (!file || !mdInputRef.current) return;
 
         // Change the cursor to a loading icon
-        mdInputRef.current.style.cursor = "wait";
+        mdInputRef.current.style.cursor = 'wait';
 
         const { uri, fileName } = await uploadMedia(file);
 
@@ -73,7 +74,7 @@ export default function MarkdownEditor({
         );
 
         // Change the cursor back to normal
-        mdInputRef.current.style.cursor = "text";
+        mdInputRef.current.style.cursor = 'text';
       }}
     />
   );
