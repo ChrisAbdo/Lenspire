@@ -15,6 +15,8 @@ import GlobalInformationModalContextProvider, {
 } from '../context/GlobalInformationModalContext';
 import ModalOverlay from '../components/modal/ModalOverlay';
 import { ThemeProvider, CssBaseline } from '@mui/material';
+import { Analytics } from '@vercel/analytics/react';
+
 import '../../styles/globals.css';
 
 // thirwdeb setup
@@ -61,6 +63,7 @@ export default function App(props: MyAppProps) {
                 {/* If modalState, show ModalOverlay */}
                 {modalState?.type !== null && <ModalOverlay />}
                 <Component {...pageProps} />
+                <Analytics />
               </GlobalInformationModalContextProvider>
             </ThemeProvider>
           </LensUserContextProvider>
