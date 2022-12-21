@@ -1,0 +1,77 @@
+.postHeaderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.postImage {
+  width: 100%;
+  object-fit: cover;
+  align-self: center;
+  max-height: 320px;
+}
+
+.postTitle {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.postMetadataContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.authorProfilePicture {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.authorName {
+  font-weight: 600;
+}
+
+.secondaryMetadata {
+}
+
+.unstyledLink {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.blogH1 {
+  margin-top: 1.75em;
+  margin-bottom: 0.5em;
+}
+
+.blogH2 {
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+}
+
+.blogH3 {
+  margin-top: 1.25em;
+}
+
+.blogH4 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.blogH5 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.blogH6 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
