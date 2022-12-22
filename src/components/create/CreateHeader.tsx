@@ -46,10 +46,10 @@ export default function CreateHeader({ postMetadata, setPostMetadata }: Props) {
         {!isSignedIn || !lensProfile ? (
           <SignInButton />
         ) : (
-          <>
+          <div className="sticky">
             <button
               onClick={() => setOpenSettingsSidebar(!openSettingsSidebar)}
-              className="btn  btn-ghost"
+              className="btn btn-ghost"
             >
               Upload
               <svg
@@ -67,7 +67,7 @@ export default function CreateHeader({ postMetadata, setPostMetadata }: Props) {
                 />
               </svg>
             </button>
-          </>
+          </div>
         )}
       </div>
 
