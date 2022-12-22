@@ -12,7 +12,7 @@ const theme = createTheme({
     },
     secondary: {
       main: "#619bff",
-      contrastText: "#fff",
+      contrastText: "#000",
     },
     error: {
       main: "#f44336",
@@ -49,7 +49,7 @@ const theme = createTheme({
       fontSize: "4rem",
       fontWeight: 700,
       lineHeight: 1.5,
-      color: "#fff",
+      color: "#000",
     },
     h2: {
       letterSpacing: "-.025em",

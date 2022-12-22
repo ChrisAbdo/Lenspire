@@ -52,7 +52,7 @@ export default function SignInButton() {
     return (
       <Button
         variant="contained"
-        className={styles.signInButton}
+        className="btn btn-outline"
         onClick={handleLogin}
       >
         Sign In 🌿
@@ -76,10 +76,10 @@ export default function SignInButton() {
     <div className={styles.profileContainer}>
       {/* TODO: Should create profile page and link to it. */}
       <Link
-        className="text-black"
+        className="text-black btn btn-ghost"
         href={`/profile/${lensUser?.defaultProfile?.handle}`}
       >
-        {lensUser?.defaultProfile?.handle}
+        @{lensUser?.defaultProfile?.handle}
       </Link>
     </div>
   );

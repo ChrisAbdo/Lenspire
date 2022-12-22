@@ -74,12 +74,8 @@ export default function CoverImage({ coverImage, setCoverImage }: Props) {
         alt="Cover image"
         className={styles.coverImagePreview}
       />
-      <Button
-        variant="contained"
-        onClick={() => setCoverImage(null)}
-        className={styles.removeCoverButton}
-      >
-        <CloseIcon color="inherit" />
+      <Button onClick={() => setCoverImage(null)}>
+        <CloseIcon color="inherit" /> Remove Image
       </Button>
     </div>
   );

@@ -75,7 +75,7 @@ export default function CreateContainer({}: Props) {
               multiline
               maxRows={3}
               required
-              className="text-black"
+              className="text-black border border-black"
             />
             <MarkdownEditor
               mdInputRef={mdInputRef}

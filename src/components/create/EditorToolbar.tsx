@@ -27,6 +27,10 @@ const tabs = [
     name: 'preview',
     icon: <VisibilityIcon />,
   },
+  {
+    name: 'guide',
+    icon: <HelpIcon />,
+  },
 ];
 
 const editorOptions = [
@@ -135,9 +139,6 @@ export default function EditorToolbar({
         alignItems="center"
         justifyContent="space-between"
         className={styles.navbarContainer}
-        style={{
-          border: '2px solid #000',
-        }}
       >
         {/* Left side of editor (Tabs) */}
         <Grid item className={styles.navbarTabs}>
@@ -159,7 +160,23 @@ export default function EditorToolbar({
         </Grid>
 
         {/* Right side of editor (Editor options) */}
-        <Grid item className={styles.navbarOptions}></Grid>
+        <Grid item className={styles.navbarOptions}>
+          {editorOptions.map((option, i) => (
+            <Grid item key={i}>
+              <Tooltip title={capitalize(option.name)}>
+                <ButtonBase
+                  className={styles.navbarOptionButton}
+                  onClick={() => {
+                    if (!mdInputRef?.current) return;
+                    option.onClick?.(mdInputRef?.current, setMdValue);
+                  }}
+                >
+                  {option.icon}
+                </ButtonBase>
+              </Tooltip>
+            </Grid>
+          ))}
+        </Grid>
       </Grid>
     </>
   );
