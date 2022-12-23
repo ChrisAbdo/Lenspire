@@ -26,9 +26,9 @@ export default function Header() {
   if (matches) {
     return (
       <>
-        <div className="navbar bg-[#f0f0f0] border-b-2 border-black sticky top-0 z-50">
+        <div className="navbar bg-[#000] border-b-2 border-black sticky top-0 z-50">
           <div className="navbar-start">
-            <div className="dropdown">
+            <div className="dropdown text-white">
               <label tabIndex={0} className="btn btn-ghost lg:hidden">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +47,7 @@ export default function Header() {
               </label>
               <ul
                 tabIndex={0}
-                className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-[#f0f0f0] rounded-box w-52"
+                className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-[#4B4A54] rounded-box w-52"
               >
                 <li>
                   <a href="/create">Create</a>
@@ -59,7 +59,7 @@ export default function Header() {
             </div>
             <a
               href="/"
-              className="btn btn-ghost normal-case text-xl text-black"
+              className="btn btn-ghost normal-case text-xl text-white"
             >
               Lenspire
               <svg
@@ -90,7 +90,7 @@ export default function Header() {
   // Desktop view
   return (
     <>
-      <div className="navbar bg-[#f0f0f0] border-b-2 border-black sticky top-0 z-50 px-12">
+      <div className="navbar bg-[#000] border-b-2 border-black sticky top-0 z-50 px-12 ">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -143,7 +143,7 @@ export default function Header() {
               </li>
             </ul>
           </div>
-          <a href="/" className="btn btn-ghost normal-case text-xl text-black">
+          <a href="/" className="btn btn-ghost normal-case text-xl text-white">
             Lenspire
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -160,14 +160,12 @@ export default function Header() {
               />
             </svg>
           </a>
-        </div>
-        <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
               <a
                 href="/create"
-                className="hidden text-black md:block relative before:content-[''] before:absolute before:block before:w-full before:h-[1px] 
-              before:bottom-0 before:left-0 before:bg-black
+                className="hidden text-white md:block relative before:content-[''] before:absolute before:block before:w-full before:h-[1px] 
+              before:bottom-0 before:left-0 before:bg-white
               before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
               before:transition before:ease-in-out before:duration-300
               active:after:content-[''] active:after:absolute active:after:block active:after:w-full active:after:h-[1px]"
@@ -178,8 +176,8 @@ export default function Header() {
             <li>
               <a
                 href="/feed"
-                className="hidden text-black md:block relative before:content-[''] before:absolute before:block before:w-full before:h-[1px] 
-              before:bottom-0 before:left-0 before:bg-black
+                className="hidden text-white md:block relative before:content-[''] before:absolute before:block before:w-full before:h-[1px] 
+              before:bottom-0 before:left-0 before:bg-white
               before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
               before:transition before:ease-in-out before:duration-300
               active:after:content-[''] active:after:absolute active:after:block active:after:w-full active:after:h-[1px]"
@@ -201,6 +199,7 @@ export default function Header() {
             </li> */}
           </ul>
         </div>
+        <div className="navbar-center hidden lg:flex"></div>
         <div className="navbar-end">
           <SignInButton />
         </div>

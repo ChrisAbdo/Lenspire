@@ -31,9 +31,7 @@ export default function SignInButton() {
 
   // If no wallet is connected,
   if (!address) {
-    return (
-      <ConnectWallet className="bg-transparent text-black hover:bg-gray-300" />
-    );
+    return <ConnectWallet className="bg-transparent text-white " />;
   }
 
   // If is on wrong network,
@@ -76,7 +74,7 @@ export default function SignInButton() {
     <div className={styles.profileContainer}>
       {/* TODO: Should create profile page and link to it. */}
       <Link
-        className="text-black btn btn-ghost"
+        className="text-white btn btn-ghost"
         href={`/profile/${lensUser?.defaultProfile?.handle}`}
       >
         @{lensUser?.defaultProfile?.handle}
