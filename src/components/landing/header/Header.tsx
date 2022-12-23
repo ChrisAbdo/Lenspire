@@ -47,7 +47,7 @@ export default function Header() {
               </label>
               <ul
                 tabIndex={0}
-                className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-[#4B4A54] rounded-box w-52"
+                className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-[#555555] rounded-box w-52"
               >
                 <li>
                   <a href="/create">Create</a>
@@ -143,7 +143,10 @@ export default function Header() {
               </li>
             </ul>
           </div>
-          <a href="/" className="btn btn-ghost normal-case text-xl text-white">
+          <Link
+            href="/"
+            className="btn btn-ghost normal-case text-xl text-white"
+          >
             Lenspire
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -159,10 +162,10 @@ export default function Header() {
                 d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
               />
             </svg>
-          </a>
+          </Link>
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a
+              <Link
                 href="/create"
                 className="hidden text-white md:block relative before:content-[''] before:absolute before:block before:w-full before:h-[1px] 
               before:bottom-0 before:left-0 before:bg-white
@@ -171,10 +174,10 @@ export default function Header() {
               active:after:content-[''] active:after:absolute active:after:block active:after:w-full active:after:h-[1px]"
               >
                 Create
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/feed"
                 className="hidden text-white md:block relative before:content-[''] before:absolute before:block before:w-full before:h-[1px] 
               before:bottom-0 before:left-0 before:bg-white
@@ -183,7 +186,7 @@ export default function Header() {
               active:after:content-[''] active:after:absolute active:after:block active:after:w-full active:after:h-[1px]"
               >
                 Feed
-              </a>
+              </Link>
             </li>
             {/* <li>
               <a

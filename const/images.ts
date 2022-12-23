@@ -2,4 +2,4 @@ export const defaultCoverPhoto =
   "ipfs://QmdU5pXrxjdhPTUnJvMHUmUns2nVpMMe4Bvq7BUKHrswqT";
 
 export const defaultProfilePicture =
-  "ipfs://QmSgwEftmN4rA53foDTAdqS6kB1Z1iUNTBjCikL7a7GiVo";
+  "https://raw.githubusercontent.com/lens-protocol/brand-kit/main/Logo/PNG/LENS%20LOGO_Colour%20variants_lens_dark%20green%20bckg.png";

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
 
@@ -9,19 +10,17 @@ export default function Hero() {
         <div className="hero border-b-2 border-black  h-screen">
           <div className="hero-content flex-col lg:flex-row-reverse  h-screen">
             <img
-              src="/lensfrens.gif"
-              className=" rounded-lg shadow-5xl w-128 h-96"
+              src="https://raw.githubusercontent.com/lens-protocol/brand-kit/main/Illustration/PNGs/LENS%20illustration_landing%20page_for%20Martin_illustration_%20social%20network%20graph.png"
+              className=" rounded-lg bg-white shadow-5xl w-128 h-96 mx-6"
               alt="lensfrens"
             />
+
             <div className="space-y-8">
               <h1 className=" shadow-gradient text-white max-w-md bg-gradient-to-r from-gray-200 via-gray-400 to-gray-600 bg-clip-text text-5xl font-extrabold tracking-tightest text-transparent sm:text-6xl lg:text-7xl">
                 Share your{' '}
                 <span
                   className=" 
-                      bg-gradient-to-r
-                      from-[#c080ff]
-                      via-white
-                      to-[#7715d9]
+                  bg-gradient-to-r from-sky-400 via-rose-400 to-lime-400
                       bg-clip-text
                       background-animate"
                 >
@@ -35,9 +34,9 @@ export default function Hero() {
                 earn from the community, built on Lens.
               </p>
 
-              <a
-                onClick={() => router.push('/create')}
-                className="relative inline-flex items-center justify-start  px-5 py-3 overflow-hidden font-bold rounded-full group"
+              <Link
+                href="/create"
+                className="cursor-pointer relative inline-flex items-center justify-start  px-5 py-3 overflow-hidden font-bold rounded-full group"
               >
                 <span className="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
                 <span className="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-white opacity-100 group-hover:-translate-x-8"></span>
@@ -45,7 +44,7 @@ export default function Hero() {
                   Get Started
                 </span>
                 <span className="absolute inset-0 border-2 border-white rounded-full"></span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -54,17 +53,20 @@ export default function Hero() {
       <footer className="footer items-center p-4 bg-neutral text-neutral-content">
         <div className="items-center grid-flow-col">
           <svg
-            width="36"
-            height="36"
-            viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
-            fillRule="evenodd"
-            clipRule="evenodd"
-            className="fill-current"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            className="w-6 h-6"
           >
-            <path d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path>
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
+            />
           </svg>
-          <p>Copyright © 2022 - All right reserved</p>
+          <p>Built with 🤍 by Chris Abdo</p>
         </div>
         <div className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
           <a>
