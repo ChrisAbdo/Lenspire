@@ -61,21 +61,12 @@ export default function CreateContainer({}: Props) {
         {/* Write tab */}
         {activeTab === 'write' && (
           <>
-            <TextField
-              label="Title"
-              fullWidth
+            <input
+              className="bg-black input input-bordered border border-[#555555] input-secondary text-white w-full mb-4"
               placeholder="Enter a title..."
-              size="medium"
-              variant="standard"
-              // InputProps={{
-              //   className: styles.titleInput,
-              // }}
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              multiline
-              maxRows={3}
               required
-              className="text-black border border-black"
             />
             <MarkdownEditor
               mdInputRef={mdInputRef}

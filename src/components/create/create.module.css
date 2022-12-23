@@ -1,7 +1,8 @@
 .navbarContainer {
   border: 1px solid rgba(234, 234, 234, 0.3);
-  background-color: #ffffff;
-  border-radius: 16px;
+  background-color: #2a2a2a;
+  color: white;
+  border-radius: 12px;
   min-height: 64px;
   height: auto;
   margin-bottom: 32px;
@@ -41,6 +42,9 @@
 
 .editor {
   margin-bottom: 5rem;
+  background-color: #000000;
+  border: #2a2a2a;
+  color: white;
 }
 
 /* On mobile devices */
@@ -110,6 +114,7 @@
   top: 48px;
   right: 12px;
   min-width: 24px;
+  color: white;
 }
 
 .settingsButton {
@@ -130,6 +135,7 @@
   font-weight: 700;
   line-height: 1.5;
   margin-bottom: 32px;
+  border: white;
 }
 
 .draftWarningContainer {

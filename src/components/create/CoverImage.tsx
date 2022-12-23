@@ -26,8 +26,9 @@ export default function CoverImage({ coverImage, setCoverImage }: Props) {
   if (!coverImage) {
     return (
       <>
+        <div className="mt-4" />
         <div
-          className="border-2 border-black h-64 text-center justify-center items-center rounded-3xl"
+          className="border-2 border-[#2a2a2a] h-64 text-center justify-center items-center rounded-xl"
           onDragOver={(e) => e.preventDefault()}
           onDrop={(e) => {
             e.preventDefault();
@@ -42,7 +43,7 @@ export default function CoverImage({ coverImage, setCoverImage }: Props) {
             }
           }}
         >
-          <Typography variant="body2" className="text-black">
+          <Typography variant="body2" className="text-white">
             Drag and drop your design here / Click to upload <br /> Accepted
             file types: .png, .jpg, .gif
           </Typography>
@@ -74,9 +75,12 @@ export default function CoverImage({ coverImage, setCoverImage }: Props) {
         alt="Cover image"
         className={styles.coverImagePreview}
       />
-      <Button onClick={() => setCoverImage(null)}>
-        <CloseIcon color="inherit" /> Remove Image
-      </Button>
+      <button
+        className="btn border border-white text-white hover:bg-[#2a2a2a]"
+        onClick={() => setCoverImage(null)}
+      >
+        <CloseIcon color="warning" /> Remove Image
+      </button>
     </div>
   );
 }

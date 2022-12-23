@@ -3,8 +3,8 @@ import { createTheme, responsiveFontSizes } from "@mui/material";
 const theme = createTheme({
   palette: {
     background: {
-      paper: "#1d1d1d",
-      default: "#f0f0f0",
+      paper: "#000",
+      default: "#000",
     },
     primary: {
       main: "#000",
@@ -58,7 +58,7 @@ const theme = createTheme({
       color: "#000",
     },
     h3: {
-      color: "#000",
+      color: "#fff",
       fontWeight: 600,
       fontSize: "2rem",
       lineHeight: 1.75,
@@ -72,12 +72,12 @@ const theme = createTheme({
     body1: {
       fontSize: "1.125rem",
       lineHeight: 1.75,
-      color: "#000",
+      color: "#fff",
     },
     body2: {
       fontSize: "1rem",
       lineHeight: 1.75,
-      color: "#000",
+      color: "#fafafa",
     },
   },
 

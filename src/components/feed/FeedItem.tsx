@@ -53,14 +53,21 @@ export default function FeedItemComponent({ post }: Props) {
 
               <div className={styles.authorInfo}>
                 <Typography variant="body1" className={styles.authorName}>
-                  {post?.profile?.name || post?.profile?.handle || 'Loading...'}
+                  <span className="text-[#e1cefd]">
+                    {post?.profile?.name ||
+                      post?.profile?.handle ||
+                      'Loading...'}
+                  </span>
                 </Typography>
                 <Typography variant="body2" className={styles.authorName}>
-                  {post?.profile?.handle || 'Loading...'} 🌿{' '}
-                  {getRelativeTime(post.createdAt) || 'Loading...'}
+                  Uploaded by {post?.profile?.handle || 'Loading...'} 🌿{' '}
+                  <span className="text-[#e1cefd]">
+                    {getRelativeTime(post.createdAt) || 'Loading...'}
+                  </span>
                 </Typography>
               </div>
             </div>
+            <div className="mt-2 border-2 border-[#2a2a2a]" />
             <Balancer>
               <Typography variant="h3" className={styles.blogTitle}>
                 {post?.metadata?.name}

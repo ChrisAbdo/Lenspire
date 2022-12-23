@@ -40,7 +40,7 @@ export default function TemporaryDrawer({
     <Grid
       container
       direction="column"
-      className="p-4 bg-[#f8f8f8]"
+      className="p-4 bg-[#2a2a2a]"
       role="presentation"
     >
       <Grid item className="flex justify-between">
@@ -48,7 +48,7 @@ export default function TemporaryDrawer({
         {/* <button onClick={toggleDrawer(false)}>Close</button> */}
         <button
           onClick={toggleDrawer(false)}
-          className="btn btn-square btn-ghost"
+          className="btn btn-square btn-ghost text-white"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +89,7 @@ export default function TemporaryDrawer({
         </>
       ) : (
         <Typography variant="body1" className={styles.label} color="error">
-          No cover image.
+          No cover image selected
         </Typography>
       )}
 
@@ -97,7 +97,7 @@ export default function TemporaryDrawer({
         <Typography variant="body1" className={styles.label}>
           Title
         </Typography>
-        <Typography variant="body2" className="text-black">
+        <Typography variant="body2" className="text-[#8f9999]">
           Note: editable in the main post editor.
         </Typography>
         {/* <TextField
@@ -110,7 +110,7 @@ export default function TemporaryDrawer({
         <input
           type="text"
           placeholder={postMetadata.title || ''}
-          className="input input-bordered w-full max-w-xs"
+          className="input input-bordered w-full max-w-xs text-white mt-2"
           value={postMetadata.title || ''}
           disabled
         />
@@ -130,7 +130,7 @@ export default function TemporaryDrawer({
           rows={6}
         /> */}
         <textarea
-          className="textarea textarea-bordered w-full"
+          className="textarea textarea-bordered w-full text-[#8f9999]"
           placeholder="Sample description"
         ></textarea>
       </Grid>
@@ -150,6 +150,7 @@ export default function TemporaryDrawer({
         contractAddress={LENS_CONTRACT_ADDRESS}
         contractAbi={LENS_ABI}
         action={async () => await createPost({ ...postMetadata })}
+        className="bg-white text-black hover:bg-[#555555]"
       >
         <Typography variant="h6">Publish to Lens 🌿</Typography>
       </Web3Button>

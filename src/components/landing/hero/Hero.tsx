@@ -1,9 +1,5 @@
-import { Button, Typography, Container } from '@mui/material';
-import Image from 'next/image';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
-import styles from './hero.module.css';
 
 export default function Hero() {
   const router = useRouter();
@@ -40,7 +36,7 @@ export default function Hero() {
               </p>
 
               <a
-                href="#_"
+                onClick={() => router.push('/create')}
                 className="relative inline-flex items-center justify-start  px-5 py-3 overflow-hidden font-bold rounded-full group"
               >
                 <span className="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>

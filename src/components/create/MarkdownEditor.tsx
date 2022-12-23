@@ -25,7 +25,7 @@ export default function MarkdownEditor({
       minRows={40}
       fullWidth
       placeholder="Enter a description here..."
-      className="mt-4 border-2 border-black rounded-3xl p-4"
+      className="mt-4 border border-[#555555] rounded-xl p-4 text-white"
       value={mdValue}
       onChange={(e) => setMdValue(e.target.value)}
       onKeyDown={(e) => {

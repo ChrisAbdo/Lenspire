@@ -12,17 +12,17 @@
 
 .feedItem {
   text-decoration: none;
-  color: inherit;
+  color: white;
   max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   outline: 1px solid rgba(255, 255, 255, 0.1);
   padding-left: 3%;
-  background-color: #f8f8f8;
+  background-color: #111111;
   padding: 16px;
   --borderWidth: 2px;
-  background: #f8f8f8;
+  background: #111111;
   position: relative;
   border-radius: 0.5rem;
   height: auto;
@@ -31,7 +31,7 @@
 
 .feedItem:hover {
   cursor: pointer;
-  outline: var(--borderWidth) solid #000;
+  outline: var(--borderWidth) solid #2a2a2a;
   transition: all 0.2s ease-in-out;
 }
 
@@ -57,6 +57,7 @@
 .authorName {
   font-weight: 500;
   margin-top: -2px;
+  color: white;
 }
 
 .authorHandleAndDatePosted {
@@ -69,9 +70,11 @@
 .blogTitle {
   margin-top: 12px;
   font-size: 1.5rem;
+  color: white;
 }
 
 .blogDescription {
+  color: white
 }
 
 /* Don't show blog description on mobile */
@@ -92,17 +95,20 @@
   justify-content: flex-end;
   align-items: center;
   gap: 1em;
+  color: white
 }
 .metricContainer {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  color: white;
 }
 
 .metricText {
   margin-left: 0.2em;
   margin-right: 8px;
+  color: white;
 }
 
 .reachedEnd {
