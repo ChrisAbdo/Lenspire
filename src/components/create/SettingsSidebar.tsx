@@ -40,11 +40,11 @@ export default function TemporaryDrawer({
     <Grid
       container
       direction="column"
-      className="p-4 bg-[#2a2a2a]"
+      className="p-4 bg-[#2a2a2a] h-content"
       role="presentation"
     >
-      <Grid item className="flex justify-between">
-        <Typography variant="h3">Publish Post</Typography>
+      <Grid item className="flex justify-between ">
+        <Typography variant="h3">Publish Design</Typography>
         {/* <button onClick={toggleDrawer(false)}>Close</button> */}
         <button
           onClick={toggleDrawer(false)}
@@ -68,7 +68,7 @@ export default function TemporaryDrawer({
       </Grid>
       <Grid item>
         <Typography variant="body2">
-          Enter the details for your post below then publish!
+          click some buttons and fill out some fields to publish your design
         </Typography>
       </Grid>
 
@@ -76,11 +76,13 @@ export default function TemporaryDrawer({
 
       {postMetadata.coverImage ? (
         <>
-          <Typography variant="body1" className="text-black">
+          <Typography variant="body1" className="text-white">
             Cover Image
           </Typography>
-          <Typography className="text-black">
-            Note: editable in the main post editor.
+          <Typography className="text-[#555555] uppercase">
+            <span className="text-red-500">*</span>You can change the cover
+            image in the main post editor.
+            <span className="text-red-500">*</span>
           </Typography>
           <img
             src={URL.createObjectURL(postMetadata.coverImage)}
@@ -97,16 +99,11 @@ export default function TemporaryDrawer({
         <Typography variant="body1" className={styles.label}>
           Title
         </Typography>
-        <Typography variant="body2" className="text-[#8f9999]">
-          Note: editable in the main post editor.
+        <Typography className="text-[#555555] uppercase">
+          <span className="text-red-500">*</span>You can change the title in the
+          main post editor.<span className="text-red-500">*</span>
         </Typography>
-        {/* <TextField
-          variant="outlined"
-          fullWidth
-          disabled
-          value={postMetadata.title || ''}
-          className="text-black"
-        /> */}
+
         <input
           type="text"
           placeholder={postMetadata.title || ''}
@@ -120,24 +117,7 @@ export default function TemporaryDrawer({
 
       <Grid item className={styles.textFieldContainer}>
         <Typography variant="body1" className={styles.label}>
-          Description
-        </Typography>
-        {/* <TextField
-          className="border border-black"
-          variant="outlined"
-          fullWidth
-          multiline
-          rows={6}
-        /> */}
-        <textarea
-          className="textarea textarea-bordered w-full text-[#8f9999]"
-          placeholder="Sample description"
-        ></textarea>
-      </Grid>
-
-      <Grid item className={styles.textFieldContainer}>
-        <Typography variant="body1" className={styles.label}>
-          Tags
+          Style Tags
         </Typography>
 
         <TagSelector

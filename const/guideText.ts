@@ -78,7 +78,7 @@ const blockquotesGuide =
   "```";
 
 const completeGuideText =
-  `# Lenspire Guide \n\n` +
+  `# Markdown Guide (Thank you @jarrodwatts for the SC!) \n\n` +
   `[Markdown Cheat Sheet (Recommended)](https://www.markdownguide.org/cheat-sheet/). \n` +
   headingGuide +
   `\n\n` +

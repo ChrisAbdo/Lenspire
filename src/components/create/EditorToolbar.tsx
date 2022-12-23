@@ -146,7 +146,7 @@ export default function EditorToolbar({
           {tabs.map((tab, i) => (
             <Grid item key={i}>
               <Button
-                color={activeTab === tab.name ? 'primary' : 'inherit'}
+                color={activeTab === tab.name ? 'info' : 'inherit'}
                 onClick={() => setActiveTab(tab.name as EditorTab)}
                 className={`${styles.navbarTab} ${
                   activeTab === tab.name ? styles.navbarTabActive : ''

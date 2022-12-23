@@ -28,7 +28,7 @@ export default function ModalOverlay() {
         container
         direction="column"
         alignItems="center"
-        className="bg-white w-1/2 h-1/2"
+        className="bg-[#555555] w-1/2 h-1/2"
       >
         <Button
           onClick={() => setModalState(null)}
@@ -44,7 +44,7 @@ export default function ModalOverlay() {
               : modalState.type === 'success'
               ? 'Success! 🎉'
               : modalState.type === 'error'
-              ? 'Something Failed! '
+              ? 'Something went wrong...😢'
               : ''}
           </Typography>
         </Grid>

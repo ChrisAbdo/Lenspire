@@ -143,7 +143,7 @@ export function useCreatePost() {
       onSuccess: async () => {
         setModalState({
           type: "success",
-          message: "Post created successfully!",
+          message: "Post created successfully! Check out your profile to see it!",
           actionBtnInfo: {
             onClick: () =>
               router.push(`/profile/${lensProfile?.defaultProfile?.handle}`),

@@ -7,19 +7,19 @@ const theme = createTheme({
       default: "#000",
     },
     primary: {
-      main: "#000",
-      contrastText: "#000",
+      main: "#fff",
+      contrastText: "#fff",
     },
     secondary: {
       main: "#619bff",
-      contrastText: "#000",
+      contrastText: "#fff",
     },
     error: {
       main: "#f44336",
       contrastText: "#fff",
     },
     text: {
-      primary: "#000",
+      primary: "#fff",
       secondary: "rgba(255, 255, 255, 0.7)",
       disabled: "rgba(255, 255, 255, 0.38)",
     },
@@ -49,13 +49,13 @@ const theme = createTheme({
       fontSize: "4rem",
       fontWeight: 700,
       lineHeight: 1.5,
-      color: "#000",
+      color: "#fff",
     },
     h2: {
       letterSpacing: "-.025em",
       fontWeight: 700,
       fontSize: "3rem",
-      color: "#000",
+      color: "#fff",
     },
     h3: {
       color: "#fff",

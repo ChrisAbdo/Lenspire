@@ -26,9 +26,9 @@ export default function CoverImage({ coverImage, setCoverImage }: Props) {
   if (!coverImage) {
     return (
       <>
-        <div className="mt-4" />
+        <div className="mt-8" />
         <div
-          className="border-2 border-[#2a2a2a] h-64 text-center justify-center items-center rounded-xl"
+          className="border-2 border-[#2a2a2a] h-64 text-center justify-center items-center rounded-xl cursor-pointer"
           onDragOver={(e) => e.preventDefault()}
           onDrop={(e) => {
             e.preventDefault();
@@ -44,8 +44,7 @@ export default function CoverImage({ coverImage, setCoverImage }: Props) {
           }}
         >
           <Typography variant="body2" className="text-white">
-            Drag and drop your design here / Click to upload <br /> Accepted
-            file types: .png, .jpg, .gif
+            Upload a cover image for your post
           </Typography>
         </div>
 
