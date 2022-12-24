@@ -22,6 +22,15 @@ const navItems = [
 export default function Header() {
   const matches = useMediaQuery(theme.breakpoints.down('md'));
 
+  function searchAccount() {
+    // function that takes id="searchinput" and redirects to /profile/:id
+    const searchInput = document.getElementById(
+      'searchinput'
+    ) as HTMLInputElement;
+
+    window.location.href = `/profile/${searchInput.value}`;
+  }
+
   // Mobile view
   if (matches) {
     return (
@@ -203,7 +212,44 @@ export default function Header() {
           </ul>
         </div>
         <div className="navbar-center hidden lg:flex"></div>
-        <div className="navbar-end">
+        <div className="navbar-end space-x-4">
+          <div className="form-control">
+            <div className="input-group">
+              <input
+                type="text"
+                id="searchinput"
+                placeholder="Ex: chrisabdo.lens"
+                className="input border-[#555555] hover:border-white"
+                // if the user presses enter, search for the account
+
+                onKeyPress={(e) => {
+                  if (e.key === 'Enter') {
+                    searchAccount();
+                  }
+                }}
+              />
+              <button
+                onClick={searchAccount}
+                id="search"
+                className="btn btn-square border-[#555555]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
           <SignInButton />
         </div>
       </div>

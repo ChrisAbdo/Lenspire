@@ -77,7 +77,7 @@ const theme = createTheme({
     body2: {
       fontSize: "1rem",
       lineHeight: 1.75,
-      color: "#fafafa",
+      color: "#000",
     },
   },
 

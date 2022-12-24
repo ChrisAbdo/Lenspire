@@ -40,13 +40,33 @@ export default function CreateHeader({ postMetadata, setPostMetadata }: Props) {
               </svg>
             </button>
           </Link>
+          <Link
+            href="/"
+            className="hidden text-white md:block relative before:content-[''] before:absolute before:block before:w-full before:h-[1px] 
+              before:bottom-0 before:left-0 before:bg-white
+              before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+              before:transition before:ease-in-out before:duration-300
+              active:after:content-[''] active:after:absolute active:after:block active:after:w-full active:after:h-[1px]"
+          >
+            Home
+          </Link>
+          <Link
+            href="/feed"
+            className="hidden text-white md:block relative before:content-[''] before:absolute before:block before:w-full before:h-[1px] 
+              before:bottom-0 before:left-0 before:bg-white
+              before:hover:scale-x-100 before:scale-x-0 before:origin-top-left
+              before:transition before:ease-in-out before:duration-300
+              active:after:content-[''] active:after:absolute active:after:block active:after:w-full active:after:h-[1px]"
+          >
+            Feed
+          </Link>
         </div>
 
         {/* Before accesing post settings, need sign in and lens profile */}
         {!isSignedIn || !lensProfile ? (
           <SignInButton />
         ) : (
-          <div className="sticky">
+          <div className="sticky top-0 z-50">
             <button
               onClick={() => setOpenSettingsSidebar(!openSettingsSidebar)}
               className="btn btn-ghost"

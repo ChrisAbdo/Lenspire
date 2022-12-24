@@ -112,11 +112,10 @@ export default function ProfileHeader({ profile }: Props) {
                 <img
                   src={
                     // @ts-ignore: Type does exist.
-                    profile.profile?.coverPicture?.original?.url ||
-                    defaultCoverPhoto
+                    profile.profile?.coverPicture?.original?.url || '/lens.png'
                   }
                   alt="coverpicture"
-                  className="rounded-t-3xl"
+                  className="rounded-t-3xl h-128 w-full"
                 />
               </div>
 
@@ -135,9 +134,9 @@ export default function ProfileHeader({ profile }: Props) {
                 <div>
                   <label
                     htmlFor="my-modal-6"
-                    className="rounded-full px-3 py-2 mt-3 mr-3 transition hover:bg-[#555555] inline-block border-2 border-white text-white font-bold"
+                    className="cursor-pointer rounded-full px-3 py-2 mt-3 mr-3 transition hover:bg-[#555555] inline-block border-2 border-white text-white font-bold"
                   >
-                    Edit Profile
+                    Profile
                   </label>
                 </div>
               </div>
